@@ -1,0 +1,27 @@
+import math
+
+def eigenvalues(v, alpha, beta, epsilon):
+    
+    #Using trace and the determinant to calculate the eigenvalue
+    T = (2*v*(alpha-1) - alpha - 3*v**2) - beta
+    D = (2*v*(alpha-1) - alpha - 3*v**2)*(-beta)-(-1)*epsilon
+    T_sq_minus_D = T**2 - 4*D
+    sqrt_T_sq_minus_D = math.sqrt(T ** 2 - 4 * D)
+
+
+    if T_sq_minus_D > 0:
+        print("Eigenvalues are Real and Different ")
+        print((T + sqrt_T_sq_minus_D) / (2))
+        print((T - sqrt_T_sq_minus_D) / (2))
+
+    elif T_sq_minus_D == 0:
+        print("Eigenvalues are real and repeated")
+        print(T / (2))
+
+    else:
+        print("Complex Roots")
+        print(T/ (2), " + i", sqrt_T_sq_minus_D)
+        print(T/ (2), " - i", sqrt_T_sq_minus_D)
+
+
+#eigenvalues(v here!, alpha here!, beta here!, epsilon here!) call the function and state parameters!
