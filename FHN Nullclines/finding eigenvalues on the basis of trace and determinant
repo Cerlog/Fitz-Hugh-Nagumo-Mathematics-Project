@@ -19,7 +19,7 @@ def eigenvalues(v, alpha, beta, epsilon):
         print(T / (2))
 
     else:
-        print("Complex Roots")
+        print("Complex eigenvalues")
         print(T/ (2), " + i", sqrt_T_sq_minus_D)
         print(T/ (2), " - i", sqrt_T_sq_minus_D)
 
